@@ -9,6 +9,18 @@ gem 'bootstrap-sass', '3.3.7'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
 # Use sqlite3 as the database for Active Record
+gem 'bcrypt','3.1.12'
+
+gem 'faker', '1.7.3'
+
+gem 'carrierwave', '1.2.2'
+
+gem 'mini_magick', '4.7.0'
+
+gem 'will_paginate', '3.1.6'
+
+gem 'bootstrap-will_paginate', '1.0.0'
+
 gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
@@ -34,6 +46,11 @@ gem 'jquery-rails', '4.3.1'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+group :production do
+  gem 'pg',  '0.20.0'
+  gem 'fog', '1.42'
+  end
+
 group :development do
   gem 'web-console',           '3.5.1'
   gem 'listen',                '3.1.5'
@@ -47,6 +64,7 @@ group :test do
   gem 'minitest-reporters',       '1.1.14'
   gem 'guard',                    '2.13.0'
   gem 'guard-minitest',           '2.4.4'
+  gem 'byebug',  '9.0.6', platform: :mri
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
